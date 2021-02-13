@@ -8,18 +8,25 @@
  * @param {number} inner radius 
  */
 
+
+
 function render(frequencyArray, ctx, centerX, centerY, radius) {
-	ctx.clearRect(0, 0, 300, 300)
-
+    ctx.clearRect(0, 0, 300, 300)
+  
 	ctx.beginPath()
-	ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI)
-	ctx.strokeStyle = ' #42378f'
-	ctx.stroke()
+	ctx.arc(centerX, centerY, radius, 0, 1 * Math.PI)
+    ctx.stroke()
+    let color =
+    "rgb(" + 100 + ", " + (200 - Math.random()) + ", " + Math.random() + ")";
+        
+    ctx.strokeStyle = `rgb(
+        0,
+        ${Math.floor(255 - 42.5 )},
+        ${Math.floor(255 - 42.5   )})`
 
-
-	const bars = frequencyArray.length
-	const barMaxLength = (300 - radius) / 2
-	const step = Math.PI * 2 / bars
+	const bars = frequencyArray.length 
+	const barMaxLength = (300 - radius) / 1
+	const step = Math.PI * 4 / bars
 
 	// Loop over the data
 	frequencyArray.forEach((f, i) => {
@@ -38,15 +45,17 @@ function render(frequencyArray, ctx, centerX, centerY, radius) {
 		// ctx.arc(x, y, radius, 0, Math.PI * 2) - draw a cricle at x, y of radius
 		// ctx.rect(x, y, width, height) - draw rectangle 
 		// ctx.fillStyle - fill color
-		// ctx.fill() - fills with style 
+        // ctx.fill() - fills with style 
+
 
 		// draw the paths 
 		ctx.moveTo(x1, y1)
-		ctx.lineTo(x2, y2)
+        ctx.lineTo(x2, y2) 
 	})
 		
 	// Stroke the paths
-	ctx.stroke()
+    ctx.stroke()
+   
 }
 
 export default render

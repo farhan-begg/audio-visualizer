@@ -53,8 +53,9 @@ function startAudio() {
 	
 	// Define a source sound file 
 	// You can replace this with your own file
-	audio.src = 'bird-whistling-a.wav'
+	// audio.src = 'bird-whistling-a.wav'
 	// audio.src = 'log-sine-sweep.wav'
+	audio.src = 'std.mp3'
 
 	// Make a new analyser
 	analyser = audioContext.createAnalyser()
