@@ -14,7 +14,7 @@ function render(frequencyArray, ctx, centerX, centerY, radius) {
 	ctx.clearRect(0, 0, 300, 300)
 	var gradient = ctx.createLinearGradient(0, 0, 170, 0);
 	gradient.addColorStop("0", "pink");
-	gradient.addColorStop("0.5" ,"white");
+	gradient.addColorStop("0.5" ,"teal");
 	gradient.addColorStop("1", "purple");
 	// gradient.addColorStop("0.5", "white");
 
@@ -30,7 +30,7 @@ function render(frequencyArray, ctx, centerX, centerY, radius) {
 
 	const bars = frequencyArray.length 
 	const barMaxLength = (300 - radius) / 2
-	const step = Math.PI * 100 / bars
+	const step = Math.PI * 10 / bars
 
 
 
