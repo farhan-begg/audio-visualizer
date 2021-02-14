@@ -88,7 +88,7 @@ function render() {
 	// verticalBarsRenderer(frequencyArray, ctx, 300, 300)
 	// circleCenterRenderer(frequencyArray, ctx, centerX, centerY)
 	// circleGridRenderer(frequencyArray, ctx, 300, 300)
-	// circleRenderer(frequencyArray, ctx, centerX, centerY, radius)
+	circleRenderer(frequencyArray, ctx, centerX, centerY, radius)
 	myCustomRender(frequencyArray, ctx, centerX, centerY, radius)
 
 

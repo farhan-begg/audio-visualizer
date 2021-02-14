@@ -11,23 +11,30 @@
 
 
 function render(frequencyArray, ctx, centerX, centerY, radius) {
-    ctx.clearRect(0, 0, 300, 300)
+	ctx.clearRect(0, 0, 300, 300)
+	var gradient = ctx.createLinearGradient(0, 0, 170, 0);
+	gradient.addColorStop("0", "pink");
+	gradient.addColorStop("0.5" ,"white");
+	gradient.addColorStop("1", "purple");
+	// gradient.addColorStop("0.5", "white");
+
   
 	ctx.beginPath()
-	ctx.arc(centerX, centerY, radius, 0, 1 * Math.PI)
-    ctx.stroke()
-    let color =
-    "rgb(" + 100 + ", " + (200 - Math.random()) + ", " + Math.random() + ")";
-        
-    ctx.strokeStyle = `rgb(
-        0,
-        ${Math.floor(255 - 42.5 )},
-        ${Math.floor(255 - 42.5   )})`
+	ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI)
+	ctx.strokeStyle = gradient;
+		// ctx.stroke()
+    // ctx.strokeStyle = `rgb(
+    //     0,
+    //     ${Math.floor(255 - 42.5 )},
+    //     ${Math.floor(255 - 42.5   )})`
 
 	const bars = frequencyArray.length 
-	const barMaxLength = (300 - radius) / 1
-	const step = Math.PI * 4 / bars
+	const barMaxLength = (300 - radius) / 2
+	const step = Math.PI * 100 / bars
 
+
+
+	
 	// Loop over the data
 	frequencyArray.forEach((f, i) => {
 		// normalize the value to the range
