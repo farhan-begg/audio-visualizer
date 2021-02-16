@@ -18,7 +18,8 @@ function render(frequencyArray, ctx, centerX, centerY, radius) {
 	gradient.addColorStop("1", "purple");
 	// gradient.addColorStop("0.5", "white");
 
-  
+	ctx.lineWidth = 10;
+
 	ctx.beginPath()
 	ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI)
 	ctx.strokeStyle = gradient;
@@ -29,8 +30,9 @@ function render(frequencyArray, ctx, centerX, centerY, radius) {
     //     ${Math.floor(255 - 42.5   )})`
 
 	const bars = frequencyArray.length 
-	const barMaxLength = (300 - radius) / 2
-	const step = Math.PI * 10 / bars
+	const barMaxLength = (600 - radius) / 2
+	const step = Math.PI * 40 / bars 
+
 
 
 
